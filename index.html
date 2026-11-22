@@ -42,9 +42,9 @@ h1 .w2 .ch{color:transparent;-webkit-text-stroke:2px var(--c);filter:drop-shadow
 @keyframes up{to{transform:none}}
 .role{font:600 clamp(1.2rem,2.6vw,2rem) var(--f);margin:1.8rem 0 2rem;position:relative;z-index:3}.role b{color:var(--c);display:inline-block;transition:.35s}
 .cta{display:flex;gap:1rem;flex-wrap:wrap;position:relative;z-index:3}
-.ph{position:absolute;right:3vw;bottom:0;width:min(38vw,500px);z-index:4;pointer-events:none;transition:transform .2s;transform-style:preserve-3d}
-.ph::before{content:'';position:absolute;inset:8% 0 0;border-radius:50% 50% 0 0;background:linear-gradient(170deg,rgba(47,107,255,.55),rgba(139,92,246,.35) 60%,transparent);filter:blur(2px)}
-.ph img{position:relative;display:block;width:100%;height:auto;mask-image:linear-gradient(#000 82%,transparent)}
+.ph{position:absolute;right:4vw;bottom:2rem;width:min(36vw,480px,calc((100vh - 8rem)*.667));z-index:4;pointer-events:none;transition:transform .2s;transform-style:preserve-3d}
+.ph::before{content:'';position:absolute;inset:-3%;border-radius:2rem;background:linear-gradient(140deg,var(--b),var(--v) 55%,var(--c));filter:blur(34px);opacity:.5}
+.ph img{position:relative;display:block;width:100%;height:auto;border-radius:1.6rem;border:1px solid rgba(160,190,255,.35);box-shadow:0 30px 80px rgba(0,0,0,.6)}
 .fc{position:absolute;z-index:4;font:700 .85rem var(--f);padding:.55rem 1rem;border-radius:999px;border:1px solid var(--l);background:rgba(8,12,30,.75);backdrop-filter:blur(10px);animation:fl 5s ease-in-out infinite alternate}
 @keyframes fl{to{transform:translateY(-16px)}}
 .sc{position:absolute;left:5vw;bottom:1.6rem;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--m);z-index:3}
@@ -100,8 +100,8 @@ footer{display:flex;justify-content:space-between;flex-wrap:wrap;gap:.5rem;paddi
 @media(max-width:900px){
  section{padding:5rem 1.3rem}#parcours{padding-inline:0}#parcours .h{padding-inline:1.3rem}.trk{padding-inline:1.3rem}
  nav{display:none;position:absolute;top:100%;left:1.3rem;right:1.3rem;margin-top:.5rem;flex-direction:column;border-radius:1.2rem}header.open nav{display:flex}.bg{display:block}nav a{padding:.8rem 1rem}
- #hero{padding-top:5.5rem;justify-content:flex-start}.ph{position:relative;right:auto;width:78%;margin:1rem auto 0;order:9}.sc{display:none}h1{font-size:clamp(3rem,17vw,6.5rem)}
- .kp,.tl{grid-template-columns:1fr 1fr}.fc{display:none}.ph{width:72%}.cvc{grid-template-columns:1fr;gap:1.8rem;padding:1.4rem}.pv{max-width:260px;margin:0 auto}.pj{grid-template-columns:1fr;gap:2rem}.tl div{aspect-ratio:1.5}
+ #hero{padding-top:5.5rem;justify-content:flex-start}.ph{position:relative;right:auto;bottom:auto;width:78%;margin:1rem auto 0;order:9}.sc{display:none}h1{font-size:clamp(3rem,17vw,6.5rem)}
+ .kp,.tl{grid-template-columns:1fr 1fr}.fc{display:none}.ph{width:80%}.cvc{grid-template-columns:1fr;gap:1.8rem;padding:1.4rem}.pv{max-width:260px;margin:0 auto}.pj{grid-template-columns:1fr;gap:2rem}.tl div{aspect-ratio:1.5}
 }
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}h1 .ch{transform:none}.js .r{opacity:1;transform:none}}
 </style>
@@ -117,8 +117,8 @@ footer{display:flex;justify-content:space-between;flex-wrap:wrap;gap:.5rem;paddi
  <h1 aria-label="Victor Sogah"><span class="w" data-s="VICTOR"></span><span class="w w2" data-s="SOGAH"></span></h1>
  <p class="role">Développeur <b id="rot">Full-Stack</b></p>
  <div class="cta"><a class="btn p mg" href="#projets">Voir mes projets</a><a class="btn mg" href="#cv">Mon CV</a></div>
- <div class="ph" id="ph"><img src="WhatsApp Image 2026-11-22 at 9.56.18 PM.jpeg" alt="Portrait de Victor Sogah" width="640" height="827">
-  <span class="fc" style="left:-4%;top:28%">Java</span><span class="fc" style="right:2%;top:16%;animation-delay:-1.5s">Spring Boot</span><span class="fc" style="left:6%;top:62%;animation-delay:-3s">React</span><span class="fc" style="right:-2%;top:50%;animation-delay:-2s">PostgreSQL</span></div>
+ <div class="ph" id="ph"><img src="portrait.jpg" alt="Portrait de Victor Sogah assis dans un fauteuil rouge" width="854" height="1280">
+  <span class="fc" style="left:-9%;top:30%">Java</span><span class="fc" style="right:-6%;top:16%;animation-delay:-1.5s">Spring Boot</span><span class="fc" style="left:-6%;top:66%;animation-delay:-3s">React</span><span class="fc" style="right:-7%;top:52%;animation-delay:-2s">PostgreSQL</span></div>
  <div class="sc">Défiler ↓</div>
 </section>
 
@@ -161,7 +161,7 @@ footer{display:flex;justify-content:space-between;flex-wrap:wrap;gap:.5rem;paddi
    <p>Remplace le papier et les tableurs d'un club d'environ 85 judokas.</p>
    <ul class="ft"><li>Inscription en ligne avec fiche PDF officielle</li><li>Cotisations, reçus PDF et bilan financier</li><li>Grades, entraînements, compétitions</li><li>JWT, accès par rôle, protection anti-robots</li></ul>
    <div class="ch2"><span>Java</span><span>Spring Boot</span><span>React</span><span>PostgreSQL</span><span>UML</span></div>
-   <p class="nt"> Code privé · captures avec données de démonstration</p></div>
+   <p class="nt">🔒 Code privé · captures avec données de démonstration</p></div>
  </div>
  <div class="rp r"><div><span class="tag w">En développement</span><h3>ReservationPro</h3><p>Application de réservation pour agence de voyage · Spring Boot + Next.js</p></div>
   <a class="btn mg" href="https://github.com/Mr-SOGAH/reservationPro" target="_blank" rel="noopener">Voir sur GitHub →</a></div>
@@ -181,7 +181,7 @@ footer{display:flex;justify-content:space-between;flex-wrap:wrap;gap:.5rem;paddi
  <a class="ml r" href="mailto:victorothnielsogah@gmail.com">victorothnielsogah@gmail.com</a>
  <div class="cc r"><a class="btn p mg" href="mailto:victorothnielsogah@gmail.com">M'écrire</a><a class="btn mg" href="https://github.com/Mr-SOGAH" target="_blank" rel="noopener">GitHub</a><a class="btn mg" href="tel:+22896666011">+228 96 66 60 11</a></div>
 </section>
-<footer><span>© 2026 Victor Sogah · Photos : Faith Djik</span><span>Lomé, Togo</span></footer>
+<footer><span>© 2026 Victor Sogah</span><span>Lomé, Togo</span></footer>
 
 <script>
 const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)],rm=matchMedia('(prefers-reduced-motion:reduce)').matches;
